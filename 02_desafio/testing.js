@@ -1,4 +1,4 @@
-const ProductManager = require("./productManager.js");
+const ProductManager = require("./ProductManager.js");
 
 // instanciar mi clase
 const producto = new ProductManager("./data/product.json");
