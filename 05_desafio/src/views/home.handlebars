@@ -1,0 +1,17 @@
+{{!-- Contener una lista de todos los productos agregados hasta el momento --}}
+{{!-- Una vez generado el archivo main de layout, generar las vistas --}}
+{{!--  ///////////////--}}
+{{!--  VISTA PRINCIPAL 
+
+- Para renderizarla necesito una ruta: vistasRouter.js
+--}}
+<h2>Listado Productos</h2>
+
+{{#if detalle}}
+<ul>
+    {{#each productos}}
+    <li>{{title}}</li>
+    {{/each}}
+</ul>
+
+<a href="/chatws">Chat</a>

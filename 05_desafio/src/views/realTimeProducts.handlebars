@@ -1,0 +1,28 @@
+<h2>Listado productos - sockets</h2>
+
+{{!-- Recorro array --}}
+<ul id="UpdateListSocket">
+    {{#each productos}}
+    <li>{{title}}</li>
+    {{/each}}
+</ul>
+
+{{!-- Libreria para usar websocket del lado del cliente --}}
+<script src="/socket.io/socket.io.js"></script>
+
+{{!--  Script configuración de websocket en mi html --}}
+<script>
+
+    const socket = io() 
+    socket.on("UpdateListSocket", (productos) => {
+        let ul = document.getElementById("UpdateListSocket")
+        ul.innerHTML = ""
+        productos.forEach(productos => {
+
+            let li = document.createElement("li")
+            li.textContent = productos.title
+            ul.appendChild(li)
+        })
+    })
+
+</script>
